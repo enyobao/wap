@@ -1,0 +1,47 @@
+*{
+	margin:0;
+	padding:0;
+}
+a{
+	text-decoration: none;
+	color:#333;
+}
+a img{
+	border:none;
+}
+img{
+	vertical-align:top;
+}
+ul,li,dl,dt,dd,ol{
+	margin:0;
+	padding:0
+}
+li{
+	list-style: none;
+}
+h1,h2,h3,h4,h5,h6{
+	font-weight: normal;
+}
+em,i{
+	font-style: normal;
+}
+input,textarea{
+	outline: none;
+}
+.clearfix:after{
+	display: block;
+	content:'';
+	clear:both;
+}
+.clearfix{
+	zoom:1;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.b_none{
+	border:none;
+}
