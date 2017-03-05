@@ -2,31 +2,52 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="author" content="m.jd.com">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
-    <meta http-equiv="Expires" content="-1">
+    <!-- <meta http-equiv="Expires" content="-1">
     <meta http-equiv="Cache-Control" content="no-cache">
-    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache"> -->
 	<title>我跑我在</title>
 	<link rel="stylesheet" href="css/base.css">
 	<link rel="stylesheet" href="css/index.css">
-	<script src="appframework.ui.min"></script>
+	<script>
+		;(function(win,doc){
+			function change(){
+				doc.documentElement.style.fontSize=20*doc.documentElement.clientWidth/320+'px';
+				console.log("clientWidth:"+document.documentElement.clientWidth);
+			}
+			change();
+			win.addEventListener('resize',change,false);
+		})(window,document);
+	</script>
+	<script src="utils/jquery.min.js"></script>
+	<!-- <script src="build/appframework.ui.min.js"></script> -->
 	<script src="js/index.js"></script>
 </head>
 <body>
+	<!-- 头部 -->
 	<header>
 		<span>logo</span>
 		<input type="text" placeholder="北京">
 		<span>登录/注册</span>
 	</header>
+	<!-- 轮播图 -->
 	<div class="slider">
-		
+		<ul class="slide_box clearfix" id="slide_box">
+			<li><img src="img/slide.jpg" alt=""></li>
+			<li><img src="img/slide.jpg" alt=""></li>
+			<li><img src="img/slide.jpg" alt=""></li>
+			<li><img src="img/slide.jpg" alt=""></li>
+		</ul>
 	</div>
+	<!-- 活动列表 -->
 	<section>
 		
 	</section>
-	<nav></nav>
+	<!-- 导航 -->
+	<nav>
+		
+	</nav>
 </body>
 </html>

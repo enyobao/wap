@@ -5,4 +5,12 @@
 	change();
 	win.addEventListener('resize',change,false);
 })(window,document);
-
+window.onload = function(){
+	change();
+}
+window.onresize = function(){
+	change();
+}
+function change(){
+	document.documentElement.style.fontSize=20*document.documentElement.clientWidth/320+'px';
+}
