@@ -1,0 +1,69 @@
+
+.content{
+	background-color: #E3E3E3;
+	width: 100%;
+	height: 100%;
+}
+.daohang {
+	width: 100%;
+	height: 13%;
+	background-color: #BFBFBF;
+	text-align: center;	
+}
+.goback {
+	width: 35px;
+	height: 70px;
+	background: url(../img/sprites.png) no-repeat; 
+	background-position: -42px 19px;
+	display: inline-block;
+	float:left;
+	margin:0px 10px;
+}
+.registerChar {
+	height: 70px;
+	line-height: 70px;
+	font-size: 27px;
+	margin:0 auto;
+}
+input {
+	width: 70%;
+	height: 70px;
+	margin: 10px 12px;
+	font-size: 25px;
+}
+button {
+	width:25%;
+	height: 70px;
+	font-size: 25px; 
+}
+.long {
+	width: 97%;
+	margin:10px 10px 10px 10px;
+}
+.textInDistance {
+	letter-spacing: 60px;
+	text-align: center;
+}
+.verify {
+	width:25%;
+	height:70px;
+	margin:10px 10px 10px 0px;
+}
+.ban {
+	width: 48%;
+	height: 70px;
+	margin: 10px 8px;
+}
+.login_error {
+	width: 98%;
+	height: 20px;
+	margin: 10px 10px;
+}
+.login_error_text{
+	color: red;
+	display: none;
+}
+.passReset {
+	float: right;
+	margin: 0px 10px;
+}

@@ -1,0 +1,32 @@
+.themeList {
+	width: 99%;
+	height:auto;
+	margin: 5px 5px;
+}
+#themeListUl li div img{
+	max-width:30%;
+	margin: 3px 5px;
+}
+#themeListUl li div {
+	height:100%;
+	border: 2px solid #fff;
+	align-item: center;
+}
+#themeListUl li div .UlSpanDivText{
+	width: 67%;
+	height: 100%;
+	margin: 3px 3px;
+	display: inline-block;
+}
+.UlSpanText {
+	width: 100%;
+	height: auto;
+	display: inline-block;
+}
+.fontBold {
+	font-weight: bold;
+}
+.lookDetail {
+	float: right;
+}
+
