@@ -2,6 +2,9 @@
 	margin:0;
 	padding:0;
 }
+body{
+	font-size: 20px;
+}
 a{
 	text-decoration: none;
 	color:#333;
@@ -46,7 +49,35 @@ input,textarea{
 	border:none;
 }
 
-
+.wrap{
+	position: relative;
+	width: 16rem;
+	font-size: 1rem;
+	background: #fff;
+}
+/*轮播图*/
+.slider{
+	position: relative;
+	width: 16rem;
+	height: 9rem;
+	overflow: hidden;
+}
+.slide_box{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 64rem;
+	height: 9rem;
+}
+.slide_box li{
+	width: 16rem;
+	height: 100%;
+	float: left;
+}
+.slide_box img{
+	width: 100%;
+	height: 100%;
+}
 
 
 

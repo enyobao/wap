@@ -21,33 +21,35 @@
 			win.addEventListener('resize',change,false);
 		})(window,document);
 	</script>
-	<script src="utils/jquery.min.js"></script>
+	<script src="script/utils/jquery.min.js"></script>
 	<!-- <script src="build/appframework.ui.min.js"></script> -->
-	<script src="js/index.js"></script>
+	<script src="script/js/index.js"></script>
 </head>
 <body>
-	<!-- 头部 -->
-	<header>
-		<span>logo</span>
-		<input type="text" placeholder="北京">
-		<span>登录/注册</span>
-	</header>
-	<!-- 轮播图 -->
-	<div class="slider">
-		<ul class="slide_box clearfix" id="slide_box">
-			<li><img src="img/slide.jpg" alt=""></li>
-			<li><img src="img/slide.jpg" alt=""></li>
-			<li><img src="img/slide.jpg" alt=""></li>
-			<li><img src="img/slide.jpg" alt=""></li>
-		</ul>
+	<div class="wrap">
+		<!-- 头部 -->
+		<header class="header clearfix">
+			<span class="logo fl">logo</span>
+			<input type="text" class="search fl" placeholder="北京">
+			<a src="" class="login fr">登录/注册</a>
+		</header>
+		<!-- 轮播图 -->
+		<div class="slider">
+			<ul class="slide_box clearfix" id="slide_box">
+				<li><img src="img/slide.jpg" alt=""></li>
+				<li><img src="img/slide.jpg" alt=""></li>
+				<li><img src="img/slide.jpg" alt=""></li>
+				<li><img src="img/slide.jpg" alt=""></li>
+			</ul>
+		</div>
+		<!-- 活动列表 -->
+		<section>
+
+		</section>
+		<!-- 导航 -->
+		<nav>
+
+		</nav>
 	</div>
-	<!-- 活动列表 -->
-	<section>
-		
-	</section>
-	<!-- 导航 -->
-	<nav>
-		
-	</nav>
 </body>
 </html>
