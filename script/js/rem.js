@@ -7,7 +7,6 @@
 ;(function(win,doc){
     function change(){
         doc.documentElement.style.fontSize=20*doc.documentElement.clientWidth/320+'px';
-        console.log("clientWidth:"+document.documentElement.clientWidth);
     }
     change();
     win.addEventListener('resize',change,false);

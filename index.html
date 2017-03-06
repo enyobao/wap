@@ -11,27 +11,18 @@
 	<title>我跑我在</title>
 	<link rel="stylesheet" href="css/base.css">
 	<link rel="stylesheet" href="css/index.css">
-	<script>
-		;(function(win,doc){
-			function change(){
-				doc.documentElement.style.fontSize=20*doc.documentElement.clientWidth/320+'px';
-				console.log("clientWidth:"+document.documentElement.clientWidth);
-			}
-			change();
-			win.addEventListener('resize',change,false);
-		})(window,document);
-	</script>
+	<script src="script/js/rem.js"></script>
 	<script src="script/utils/jquery.min.js"></script>
 	<!-- <script src="build/appframework.ui.min.js"></script> -->
 	<script src="script/js/index.js"></script>
 </head>
 <body>
-	<div class="wrap">
+	<div class="wrap" id="wrap">
 		<!-- 头部 -->
 		<header class="header clearfix">
 			<span class="logo fl">logo</span>
 			<input type="text" class="search fl" placeholder="北京">
-			<a src="" class="login fr">登录/注册</a>
+			<a src="" class="login fr">登录</a>
 		</header>
 		<!-- 轮播图 -->
 		<div class="slider">
@@ -47,8 +38,34 @@
 
 		</section>
 		<!-- 导航 -->
-		<nav>
-
+		<nav class="navWrap">
+			<ul class="navCon clearfix">
+				<li class="navlist fl">
+					<a href="javascript:;">
+						<img src="img/a-home.png" alt="">
+					</a>
+				</li>
+				<li class="navlist fl">
+					<a href="javascript:;">
+						<img src="img/n-catergry.png" alt="">
+					</a>
+				</li>
+				<li class="navlist fl">
+					<a href="javascript:;">
+						<img src="img/n-find.png" alt="">
+					</a>
+				</li>
+				<li class="navlist fl">
+					<a href="javascript:;">
+						<img src="img/n-me.png" alt="">
+					</a>
+				</li>
+				<li class="navlist fl">
+					<a href="javascript:;">
+						<img src="img/n-me.png" alt="">
+					</a>
+				</li>
+			</ul>
 		</nav>
 	</div>
 </body>

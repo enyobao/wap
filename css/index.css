@@ -9,6 +9,8 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+    font-size: 0.8rem;
+    color: #fff;
 }
 .header .logo{
 
@@ -16,5 +18,9 @@
 .header .search{
     width: 8rem;
     height: 1.5rem;
-    font-size: 1rem;
+    font-size: 0.8rem;
+}
+.header .login{
+    color: #fff;
+    font-size: 0.7rem;
 }
