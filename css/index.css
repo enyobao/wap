@@ -24,3 +24,82 @@
     color: #fff;
     font-size: 0.7rem;
 }
+.barContainer{
+    font-size: 0.7rem;
+    width: 16rem;
+    position: relative;
+}
+.sel{
+    position: relative;
+    width: 16rem;
+    height: 1.4rem;
+    display: flex;
+    flex-flow:row;
+    align-items:center;
+    justify-content:space-around;
+    border-bottom: 2px solid #ccc;
+}
+.sel li{
+    height: 1.4rem;
+    line-height: 1.4rem;
+}
+.sel .on{
+    color: #f00;
+}
+.barBox{
+    position: absolute;
+    left: 0;
+    top: 1.42rem;
+    z-index: 5;
+    background: #fff;
+    border-bottom: 1px solid #ccc;
+    width: 16rem;
+}
+.barBox li{
+    padding: 0.5rem;
+    width: 15rem;
+    display: flex;
+    align-items:center;
+    justify-content:space-around;
+    display: none;
+}
+.barBox li span{
+    display: inline-block;
+    padding: 0.2rem 0.4rem;
+    margin: 0.2rem;
+    border: 1px solid #ccc;
+}
+.barBox li.on{
+    display: block;
+}
+.campList li {
+    position: relative;
+    border-bottom: 2px solid #eee;
+    width:15rem;
+    padding: 0.5rem 0.5rem;
+}
+.campList li img{
+    width:30%;
+    height: 4rem;
+    margin-right: 0.4rem;
+    float: left;
+}
+.campDetail{
+    font-size: 0.6rem;
+    width: 67%;
+    float: right;
+}
+.campDetail span{
+    line-height: 1rem;
+    word-wrap:break-word;
+    width: 98%;
+    display: inline-block;
+}
+.campDetail .title{
+    display: -webkit-box; 
+    // -webkit-box-orient;
+    overflow : hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}

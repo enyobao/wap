@@ -13,6 +13,7 @@
 	<link rel="stylesheet" href="css/index.css">
 	<script src="script/js/rem.js"></script>
 	<script src="script/utils/jquery.min.js"></script>
+	<script src="script/utils/jsrender.min.js"></script>
 	<!-- <script src="build/appframework.ui.min.js"></script> -->
 	<script src="script/js/index.js"></script>
 </head>
@@ -35,7 +36,51 @@
 		</div>
 		<!-- 活动列表 -->
 		<section>
-
+			<div class="barContainer">
+				<ul class="sel">
+					<li class="barlist fl on">全部</li>
+					<li class="barlist fl">热门城市</li>
+					<li class="barlist fl">热门种类</li>
+				</ul>
+				<ul class="barBox">
+					<li class="barShow">
+						<span>北京</span>
+						<span>北京</span>
+						<span>北京</span>
+						<span>北京</span>
+						<span>北京</span>
+						<span>北京</span>
+						<span>北京</span>
+						<span>北京</span>
+					</li>
+					<li class="barShow">
+						<span>跑步</span>
+						<span>跑步</span>
+						<span>跑步</span>
+						<span>跑步</span>
+						<span>跑步</span>
+						<span>跑步</span>
+						<span>跑步</span>
+						<span>跑步</span>
+					</li>
+				</ul>
+			</div>	
+			<ul class="campList" id="campListCon">
+				<li class="clearfix">
+					<img src="http://dl.bizhi.sogou.com/images/2012/03/14/124196.jpg">
+					<span class="campDetail">
+						<span class="title">
+							苏杭－乌镇－三日游
+						</span>
+						<span class="departure">
+							北京－苏杭
+						</span>
+						<span class="starTime">2016-01-02</span>	
+						<span class="price">¥999.99</span>
+					</span>
+					
+				</li>
+			</ul>			
 		</section>
 		<!-- 导航 -->
 		<nav class="navWrap">
@@ -68,5 +113,17 @@
 			</ul>
 		</nav>
 	</div>
+<!--#include file="template.inc"-->
+<script type="text/x-jsrender" id="campListTmp">
+	<li class="clearfix">
+		<img src="http://dl.bizhi.sogou.com/images/2012/03/14/124196.jpg">
+		<span class="campDetail">
+			<span class="title">{{:title}}</span>
+			<span class="departure">{{:departure}}</span>
+			<span class="starTime">{{:starTime}}</span>	
+			<span class="price">¥{{:price}}</span>
+		</span>
+	</li>
+</script>
 </body>
 </html>
