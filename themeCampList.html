@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<title>主题</title>
+	<link rel="stylesheet" type="text/css" href="css/theme.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/register.css">
+	<script src="script/js/rem.js"></script>
+	<script src="script/utils/jquery.min.js"></script>
+	<script src="script/utils/jsrender.min.js"></script>
+	<script type="text/javascript" src="script/js/themeCampList.js"></script>
+</head>
+<body>
+	<div class="content" id="wrap">
+		<div class="daohang">
+			<span class="goback"></span>
+			<span class="registerChar">主题</span>
+		</div>
+		<div class="campList">
+			<ul id="themeCampListUl">
+				
+			</ul>
+		</div>
+	</div>
+	<script type="text/x-jsrender" id="themeCampListTmp">
+	<li class="clearfix">
+		<img src="http://dl.bizhi.sogou.com/images/2012/03/14/124196.jpg">
+		<span class="campDetail">
+			<span class="title">{{:title}}</span>
+			<span class="departure">{{:departure}}</span>
+			<span class="starTime">{{:starTime}}</span>	
+			<span class="price">¥{{:price}}</span>
+		</span>
+	</li>
+	</script>
+</body>
+</html>

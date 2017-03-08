@@ -1,21 +1,22 @@
 .shareList {
 	width: 99%;
 	height:auto;
-	margin: 5px 5px;
+	margin: 0.1rem 0.1rem;
 }
 #shareListUl li div img{
-	max-width:31%;
-	margin: 5px 6px;
+	width:4.7rem;
+	margin: 0.3rem 0.05rem;
+	height: 4.5rem;
 }
 #shareListUl li div {
 	height:100%;
-	border: 2px solid #fff;
+	border: 0.05rem solid #fff;
 	align-item: center;
 }
 #shareListUl li div .UlSpanDivText{
 	width: 99%;
 	height: 100%;
-	margin: 3px 5px;
+	margin: 0.1rem 0.11rem;
 	display: inline-block;
 }
 .UlSpanText {
@@ -33,11 +34,11 @@
 	float: right;
 	display: inline-block;
     vertical-align: middle;
-    height: 24px;
-    line-height: 24px;
-    padding: 0 7px;
+    height: 0.5rem;
+    line-height: 0.5rem;
+    padding: 0 0.1rem;
     color: #fff;
-    font-size: 16px;
+    font-size: 0.3rem;
     font-weight: 400;
 }
 .backgroundColorGreen{
@@ -48,28 +49,28 @@
 }
 .shareContentTitle{
 	width: 99%;
-	margin: 5px 10px;
-	font-size: 24px;
+	margin: 0.1rem 0.2rem;
+	font-size: 0.5rem;
 	font-weight: bold;
 }
 .shareContentTime {
 	text-align: right;
 	width: 99%;
-	margin: 0px 5px;
+	margin: 0rem 0rem;
 }
 .shareContentDetail {
 	width: 99%;
-	margin: 8px 5px;
-	line-height: 28px;
+	margin: 0.1rem 0.15rem;
+	line-height: 0.5rem;
 }
 .shareContent {
 	text-align: center;
 	width: 98%;
 	height: auto;
-	margin: 5px 0px;
+	margin: 0.1rem 0rem;
 }
 .shareContent img{
 	max-width: 90%;
-	margin: 5px 0px;
+	margin: 0.2rem 0rem;
 }
 

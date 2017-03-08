@@ -5,54 +5,42 @@
 	<title>主题</title>
 	<link rel="stylesheet" type="text/css" href="css/theme.css">
 	<link rel="stylesheet" type="text/css" href="css/register.css">
+	<script src="script/js/rem.js"></script>
+	<script src="script/utils/jquery.min.js"></script>
+	<script src="script/utils/jsrender.min.js"></script>
+	<script type="text/javascript" src="script/js/theme.js"></script>
 </head>
 <body>
-	<div class="content">
+	<div class="content" id="wrap">
 		<div class="daohang">
 			<span class="registerChar">主题</span>
 		</div>
 		<div class="themeList">
 			<ul id="themeListUl">
-				<li>
-					<div>
-						<img src="http://a4.att.hudong.com/38/47/19300001391844134804474917734_950.png"
-						>
-						<span class="UlSpanDivText clearfix">
-							<span class="UlSpanText fontBold">
-							这是一个应用的标题,你来测试一下，这个额到家哦I很快就很快就会开花立刻决定是否是非常随传随到抽空回家
-							</span>
-							<span>
-								<p>
-									这是一个应用的描述，捐款活动空间撒很疯狂华东数控均出现每年约我I容易啊是的看吗出自内心，吃不许百度上，在农村，在农村，在线吗你猜，新农村，现在农村，招贤纳才
-								</p>
-							</span>
-							<span class="lookDetail">
-								查看详情 >>
-							</span>
-						</span>
-					</div>
-				</li>
-				<li>
-					<div>
-						<img src="http://a4.att.hudong.com/38/47/19300001391844134804474917734_950.png"
-						>
-						<span class="UlSpanDivText clearfix">
-							<span class="UlSpanText fontBold">
-							这是一个应用的标题,你来测试一下，这个额到家哦I很快就很快就会开花立刻决定是否是非常随传随到抽空回家
-							</span>
-							<span>
-								<p>
-									这是一个应用的描述，捐款活动空间撒很疯狂华东数控均出现每年约我I容易啊是的看吗出自内心，吃不许百度上，在农村，在农村，在线吗你猜，新农村，现在农村，招贤纳才
-								</p>
-							</span>
-							<span class="lookDetail">
-								查看详情 >>
-							</span>
-						</span>
-					</div>
-				</li>
+				
 			</ul>
 		</div>
 	</div>
+	<script type="text/x-jsrender" id="themeListTmp">
+	<li>
+					<div>
+						<img src="{{:picUrl}}"
+						>
+						<span class="UlSpanDivText clearfix">
+							<span class="UlSpanText fontBold">
+							{{:title}}
+							</span>
+							<span>
+								<p>
+									{{:detail}}
+								</p>
+							</span>
+							<span class="lookDetail">
+								<a href="themeCampList.html?id={{:id}}">查看详情 >></a>
+							</span>
+						</span>
+					</div>
+				</li>
+</script>
 </body>
 </html>

@@ -4,6 +4,7 @@
 	<title>密码找回</title>
 	<link rel="stylesheet" type="text/css" href="css/base.css">
 	<link rel="stylesheet" type="text/css" href="css/register.css">
+	<script src="script/js/rem.js"></script>
 </head>
 <body>
 	<div class="content">
@@ -12,16 +13,55 @@
 			<span class="registerChar">密码找回</span>
 		</div>
 		<div class="registerTable">
-			<input type="text" placeholder="请输入验证码">
-			<img class="verify" src="http://campaignss.com/login/verify-code?random="+Math.random();>
-			<input type="text" placeholder="请输入已注册手机号">
-			<button>获取验证码</button>
-			<input type="text" placeholder="请输入手机验证码" class="long">
-			<input type="text" placeholder="请输入6至20位密码,只包含数字、字母" class="long">
+			<input type="text" placeholder="请输入验证码" name="verifyCode">
+			<img class="verify" src="http://www.ioutdoor.org/login/verify-code?random="+Math.random();>
+			<input type="text" placeholder="请输入已注册手机号" name="phone">
+			<button id="phoneSend">获取验证码</button>
+			<input type="text" placeholder="请输入手机验证码" class="long" name="phoneCode">
+			<input type="password" placeholder="请输入6至20位密码,只包含数字、字母" class="long" name="passwd">
 			<button class="long textInDistance">确定</button>
 		</div>
 	</div>
-	
+	<script type="text/javascript">
+		$("#phoneSend").click(function(){
+			var verifyCode = $("input[name='verifyCode']").val();
+			var phone = $("input[name='phone']").val();
 
+			if (!verifyCode || !phone) {
+				alert("请填写手机号和验证码");
+				return false;
+			}
+			var params = "verifyCode="+verifyCode+"&phone="+phone;
+			ajaxPost("/wap/user/phone-send", params, function(data){
+				if(data.code == 200){
+					$("#phoneSend").text("30分钟后可以重发");
+				}else{
+					alert(data.info);
+					return false;
+				}
+			});
+		});
+		$('#registerDo').click(function
+			(){
+				var phone = $("input[name='phone']").val();
+				var phoneCode = $("input[name='phoneCode']").val();
+				var passwd = $("input[name='passwd']").val();
+
+				if(!verifyCode || !phoneCode || !phone || !passwd){
+					alert("请填写全部信息");
+					return false;
+				}
+
+				var params = "verifyCode="+verifyCode+"&phone="+phone+"&phoneCode="+phoneCode+"&passwd="+passwd;
+				ajaxPost("/wap/user/register", params, function(data){
+					if(data.code == 200){
+						location.href="login.html";
+					}else{
+						alert(data.info);
+						return false;
+					}
+				});
+			});
+	</script>
 </body>
 </html>

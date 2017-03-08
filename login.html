@@ -4,6 +4,9 @@
 	<title>登陆</title>
 	<link rel="stylesheet" type="text/css" href="css/base.css">
 	<link rel="stylesheet" type="text/css" href="css/register.css">
+	<script src="script/utils/jquery.min.js"></script>
+	<script src="script/utils/common.js"></script>
+	<script src="script/js/rem.js"></script>
 </head>
 <body>
 	<div class="content">
@@ -11,21 +14,40 @@
 			<span class="goback"> </span>
 			<span class="registerChar">登陆</span>
 		</div>
-		<div class="registerTable">
-			<input type="text" placeholder="请输入手机号" class="long">
-			<input type="text" placeholder="请输入6至20位密码" class="long">
+		<div class="registerTable clearfix">
+			<input type="text" placeholder="请输入手机号" class="long" name="phone">
+			<input type="password" placeholder="请输入6至20位密码" class="long" name="passwd">
 			<div class="login_error clearfix">
-				<span class="login_error_text">
+				<span class="login_error_text" id="login_error_text">
 					这是一个错误信息					
 				</span>
 				<span class="passReset">
-					忘记密码？找回密码 >>
+					<a href="passReset.html">忘记密码？找回密码 >></a>
 				</span>
 			</div>
-			<button class="ban textInDistance">登陆</button><button class="ban textInDistance">注册</button>
+			<button id="btnLogin" class="ban textInDistance">登陆</button><a href="register.html"><button class="ban textInDistance" >注册</button></a>
 		</div>
 	</div>
-	
+	<script type="text/javascript">
+		//登录
+		$("#btnLogin").click(function(){
+			var userName = $("input[name='phone']").val();
+			var passwd = $("input[name='passwd']").val();
 
+			if(!userName || !passwd){
+				$("#login_error_text").text("用户名或者密码不正确");
+				return false;
+			}
+			var params = "userName="+userName+"&passwd="+passwd;
+			ajaxPost("/wap/user/login", params, function(data){
+				if(data.code == 200){
+					location.href = "index.html";
+				}else{
+					$("#login_error_text").text(data.info);
+					return false;
+				}
+			});
+		});
+	</script>
 </body>
 </html>
