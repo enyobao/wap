@@ -1,0 +1,25 @@
+.campDetail{
+    padding: 0.5rem;
+    font-size: 0.6rem;
+    width: 15rem;
+}
+.campDetail span{
+    line-height: 1rem;
+    word-wrap:break-word;
+    width: 98%;
+    display: block;
+}
+.campDetail .title{
+    color: #00bfff;
+}
+.campDetail .price{
+    color: #f00;
+}
+.campDetail .title{
+    display: -webkit-box;
+// -webkit-box-orient;
+    overflow : hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
