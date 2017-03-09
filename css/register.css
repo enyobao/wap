@@ -66,6 +66,7 @@ button {
 .login_error_text{
 	color: red;
 	display: none;
+	font-size: 0.5rem;
 }
 .passReset {
 	float: right;
