@@ -26,9 +26,27 @@
 			<font style="font-weight:bold;">摘要：</font>舒服可是对方开始疯狂是否快乐还是分开还是开发计划守空房很多事,啊客户的看哈多看哈厉害的时间都很长可能出现中南传媒支持你，只能啊是的看哈点卡，啊好的卡就会打开撒还在南昌怎么想你存在
 		</div>
 		<div class="shareContent">
-			<img src="http://a4.att.hudong.com/38/47/19300001391844134804474917734_950.png">
-			<img src="http://a4.att.hudong.com/38/47/19300001391844134804474917734_950.png">
 		</div>
 	</div>
+	<script type="text/javascript">
+		var id = getQueryString('id');
+		ajaxGet("/wap/share/detail", "id="+id, function(data){
+			console.log(data);
+			var info = data.data;
+			$(".shareContentTitle").html(info.title);
+			$(".shareContentTime").html(info.createTime);
+			$(".shareContentDetail").html('<font style="font-weight:bold;">摘要：</font>' + info.detail);
+			if(info.shareType == 1){
+				$(".shareContent").html(info.content);
+			}else{
+				for(var itemkey in info.content){
+					$("<img>", {
+						    src: info.content[itemkey]
+						}).css({
+						}).appendTo(".shareContent");
+				}
+			}
+		});
+	</script>
 </body>
 </html>
