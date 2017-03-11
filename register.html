@@ -49,12 +49,12 @@
 				var phoneCode = $("input[name='phoneCode']").val();
 				var passwd = $("input[name='passwd']").val();
 
-				if(!verifyCode || !phoneCode || !phone || !passwd){
+				if(!phoneCode || !phone || !passwd){
 					alert("请填写全部信息");
 					return false;
 				}
 
-				var params = "verifyCode="+verifyCode+"&phone="+phone+"&phoneCode="+phoneCode+"&passwd="+passwd;
+				var params = "phone="+phone+"&vcode="+phoneCode+"&password="+passwd;
 				ajaxPost("/wap/user/register", params, function(data){
 					if(data.code == 200){
 						location.href="login.html";

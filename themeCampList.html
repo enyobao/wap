@@ -9,6 +9,8 @@
 	<script src="script/js/rem.js"></script>
 	<script src="script/utils/jquery.min.js"></script>
 	<script src="script/utils/jsrender.min.js"></script>
+	<script src="script/utils/common.js"></script>
+	
 	<script type="text/javascript" src="script/js/themeCampList.js"></script>
 </head>
 <body>
@@ -25,11 +27,11 @@
 	</div>
 	<script type="text/x-jsrender" id="themeCampListTmp">
 	<li class="clearfix">
-		<img src="http://dl.bizhi.sogou.com/images/2012/03/14/124196.jpg">
+		<img src="{{:headImg}}">
 		<span class="campDetail">
 			<span class="title">{{:title}}</span>
-			<span class="departure">{{:departure}}</span>
-			<span class="starTime">{{:starTime}}</span>	
+			<span class="departure">{{:destination}}</span>
+			<span class="starTime">{{:beginTime}}</span>	
 			<span class="price">¥{{:price}}</span>
 		</span>
 	</li>
