@@ -12,8 +12,11 @@ $(function(){
 	});
 
 	var data = [
-		{title:"北京到上海日游",detail:"宝宝最好看，宝宝最帅",picUrl:"http://www.ioutdoor.org/upload/20170308163940_293.jpg",id:1},
-		{title:"北京到上海日游",detail:"爱我美美哒老婆",picUrl:"http://www.ioutdoor.org/upload/20170308163940_293.jpg",id:1},
+		{title:"北京到上海日游",introduction:"宝宝最好看，宝宝最帅",picUrl:"http://www.ioutdoor.org/upload/20170308163940_293.jpg",id:1},
+		{title:"北京到上海日游",introduction:"宝宝最好看，宝宝最帅",picUrl:"http://www.ioutdoor.org/upload/20170308163940_293.jpg",id:1},
+		{title:"北京到上海日游",introduction:"宝宝最好看，宝宝最帅",picUrl:"http://www.ioutdoor.org/upload/20170308163940_293.jpg",id:1},
+		{title:"北京到上海日游",introduction:"宝宝最好看，宝宝最帅",picUrl:"http://www.ioutdoor.org/upload/20170308163940_293.jpg",id:1},
+		{title:"北京到上海日游",introduction:"爱我美美哒老婆",picUrl:"http://www.ioutdoor.org/upload/20170308163940_293.jpg",id:1},
 	];
 	var campListTmp = $('#themeListTmp').render(data);
 	var campListCon = $('#themeListUl');

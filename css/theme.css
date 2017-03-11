@@ -3,6 +3,7 @@
 	height:auto;
 	margin: 0.1rem 0.1rem;
 	background-color: #E3E3E3;
+	font-size: 0.6rem;
 }
 #themeListUl li div img{
 	width:4.5rem;
@@ -10,6 +11,7 @@
 	margin: 0.2rem 0.2rem;
 }
 #themeListUl li div {
+	position: relative;
 	height:100%;
 	border: 0.1rem solid #fff;
 	align-item: center;
@@ -30,7 +32,8 @@
 	font-weight: bold;
 }
 .lookDetail {
-	float: right;
-	margin-top: 3rem; 
+	position: absolute;
+	right: 0.5rem;
+	bottom: 0.5rem;
 }
 
