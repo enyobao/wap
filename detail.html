@@ -46,5 +46,17 @@
         </li>
     </script>
     <button class="log_in">我要报名</button>
+    <script type="text/javascript">
+	$(".log_in").click(function(){
+		var id = getQueryString("id");
+		ajaxGet("/wap/user/login-status", '', function(data){
+			if(data.code == 200){
+				location.href = "trade.html?id="+id;
+			}else{
+				location.href = "login.html";
+			}
+		});
+	});
+    </script>
 </body>
 </html>
