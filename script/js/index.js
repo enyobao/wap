@@ -3,13 +3,13 @@ $(function(){
 	var clientH = $(document).height();
 	var oWrap = $('#wrap');
 	oWrap.css('height',clientH);
-        ajaxGet("/wap/campaign/list", '', function(data){
-		console.log(data);
-		var campList = data.list;
-		var campListTmp = $('#campListTmp').render(data);
-        	var campListCon = $('#campListCon');
-        	campListCon.append(campListTmp);
-	}); 
+ //    ajaxGet("/wap/campaign/list", '', function(data){
+	// 	console.log(data);
+	// 	var campList = data.list;
+	// 	var campListTmp = $('#campListTmp').render(data);
+ //        	var campListCon = $('#campListCon');
+ //        	campListCon.append(campListTmp);
+	// }); 
 	var data = [
 		{title:"北京到上海日游",departure:"北京－上海",starTime:"2017-12-09",price:2333},
 		{title:"北京密云青龙霞1日游",departure:"北京－上海",starTime:"2017-12-09",price:2333},
@@ -18,4 +18,37 @@ $(function(){
 	var campListTmp = $('#campListTmp').render(data);
 	var campListCon = $('#campListCon');
 	campListCon.append(campListTmp);
+	
+	var slideData = [
+		'img/slide.jpg',
+		'img/slide.jpg',
+		'img/slide.jpg',
+		'img/slide.jpg',
+		'img/slide.jpg'
+	];
+
+	//轮播图
+	$('#slide_box').append($('#slide_box').html());
+	var oSlideList = $('#slide_box li');
+	var oSlideLength = oSlideList.length;
+	var slideNum = 0;
+	var dotNum = 0;
+	var oSlideWidth = oSlideList.eq(0).width();
+	$('#slide_box').css('width',oSlideLength*oSlideWidth);
+	var timer = setInterval(function(){
+		if(slideNum < oSlideLength){
+			
+			if(slideNum == oSlideLength/2){
+				slideNum = 0;
+				$('#slide_box').css('left',0);
+			}
+			slideNum++;
+			dotNum = slideNum;
+			if(dotNum == oSlideLength/2){
+				dotNum = 0;
+			}
+			$('#slide_box').animate({left:-oSlideWidth*slideNum});
+			$('.slide_dot li').removeClass('on').eq(dotNum).addClass('on');
+		}
+	},5000);
 });

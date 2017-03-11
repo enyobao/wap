@@ -70,6 +70,22 @@ input,textarea{
 	width: 64rem;
 	height: 9rem;
 }
+.slide_dot{
+	position: absolute;
+	right: 0.5rem;
+	bottom: 0.5rem;
+}
+.slide_dot li{
+	margin-left: 0.3rem;
+	background: #fff;
+	width: 0.5rem;
+	height: 0.5rem;
+	float: left;
+	border-radius: 50%;
+}
+.slide_dot li.on{
+	background: #000;
+}
 .slide_box li{
 	width: 16rem;
 	height: 100%;
