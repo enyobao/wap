@@ -12,6 +12,93 @@
     <script src="script/js/user.js"></script>
 </head>
 <body>
-
+	<header class="userCon clearfix">
+		<span class="avator fl">
+			<img src="img/head.jpg" alt="">
+		</span>
+		<span class="username fl">
+			阿里巴巴吧
+		</span>
+	</header>
+	<div class="myOrder">我的订单</div>
+	<section class="orderBox">
+		<ul class="orderCon" id="orderCon">
+			
+		</ul>
+	</section>
+	<nav class="navWrap">
+		<ul class="navCon clearfix">
+			<li class="navlist fl">
+				<a href="javascript:;">
+					<img src="img/a-home.png" alt="">
+				</a>
+			</li>
+			<li class="navlist fl">
+				<a href="javascript:;">
+					<img src="img/n-catergry.png" alt="">
+				</a>
+			</li>
+			<li class="navlist fl">
+				<a href="javascript:;">
+					<img src="img/n-find.png" alt="">
+				</a>
+			</li>
+			<li class="navlist fl">
+				<a href="javascript:;">
+					<img src="img/n-me.png" alt="">
+				</a>
+			</li>
+			<li class="navlist fl">
+				<a href="javascript:;">
+					<img src="img/n-me.png" alt="">
+				</a>
+			</li>
+		</ul>
+	</nav>
+	<!-- 订单列表模版 -->
+	<script type="text/x-jsrender" id="orderListTmp">
+		<li>
+			<div class="clearfix">
+				<img src="{{:src}}"/>
+				<span class="campDetail">
+					<span class="title">{{:title}}</span>
+					<span class="departure">{{:departure}}</span>
+					<span class="starTime">{{:starTime}}</span>	
+					<span class="price">¥{{:price}}</span>
+				</span>
+				<span class="orderStatus">{{:statusMark}}</span>
+			</div>	
+			<div class="userDetailBox">
+				<p class="up_down">
+					<img src="img/down.png" alt="" class="down">
+					<img src="img/up.png" alt="" class="up">
+				</p>
+				<div class="userDetailCon" style="display: none;">
+					<ul class="userDetailList" id="userDetailList">
+						<li style="border-bottom: 1px solid #ccc;">
+							报名游客信息
+						</li>
+						<li class="clearfix black">
+							<span class="fl">用户名</span>
+							<span class="fr">联系方式</span>
+						</li>
+						{{for mark}}
+						<li class="clearfix">
+							<span class="fl">{{:userName}}</span>
+							<span class="fr">{{:phone}}</span>
+						</li>
+						{{/for}}
+					</ul>
+				</div>
+			</div>
+		</li>
+	</script>
+	<!-- 用户详情模版 -->
+	<script type="text/x-jsrender" id="userTmp">
+		<li class="clearfix">
+			<span class="fl">{{:userName}}</span>
+			<span class="fr">{{:phone}}</span>
+		</li>
+	</script>
 </body>
 </html>

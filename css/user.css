@@ -1,0 +1,137 @@
+.userCon{
+	width: 15rem;
+	padding: 1rem 0.5rem;
+	height: 3.5rem;
+	border-bottom: 10px solid #eee;
+}
+.avator{
+	display: block;
+	width: 3.5rem;
+	height: 3.5rem;
+	border-radius: 50%;
+	overflow: hidden;
+	border: 5px solid #333;
+}
+.avator img{
+	width: 100%;
+}
+.myOrder{
+	width: 15rem;
+	padding: 0.5rem;
+	height: 1rem;
+	line-height: 1rem;
+	font-size: 0.6rem;
+	border-bottom: 10px solid #eee;
+}
+.username{
+	width: 9rem;
+	height: 100%;
+	font-size: 0.6rem;
+	line-height: 3.5rem;
+	padding-left: 1rem;
+}
+.orderBox{
+	margin-bottom: 2rem;
+}
+.orderCon li{
+	position: relative;
+	width: 15rem;
+	padding: 0.5rem;
+	border-bottom: 5px solid #eee;
+}
+.orderCon li .orderStatus{
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 4rem;
+	height: 0.7rem;
+	line-height: 0.7rem;
+	font-size: 0.6rem;
+	text-align: center;
+	color: #fff;
+	background: #f00;
+}
+.orderCon li img{
+    width:30%;
+    height: 4rem;
+    margin-right: 0.4rem;
+    float: left;
+}
+.campDetail{
+    font-size: 0.6rem;
+    width: 67%;
+    float: right;
+}
+.campDetail span{
+    line-height: 1rem;
+    word-wrap:break-word;
+    width: 98%;
+    display: inline-block;
+}
+.campDetail .title{
+    display: -webkit-box; 
+    // -webkit-box-orient;
+    overflow : hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.userDetailBox{
+	padding-top: 0.5rem;
+	position: relative;
+	width: 100%;
+}
+.userDetailBox .up_down{
+	width: 100%;
+	height: 1rem;
+	text-align: center;
+	border-top: 1px dashed #eee;
+}
+.userDetailBox .up_down img{
+	display: block;
+	width: 1rem;
+	height: 1rem;
+	margin: 0 auto;
+	float: none;
+}
+// .userDetailBox .userDetailCon{
+// 	height: 1rem;
+// }
+.orderCon .userDetailBox li{
+	width: 100%;
+	padding: 0;
+	border: none;
+	color: #666;
+	font-size: 0.55rem;
+	text-align: center;
+	line-height: 1rem;
+}
+.orderCon .userDetailBox .black{
+	color: #333;
+	font-size: 0.6rem;
+}
+.orderCon .userDetailBox li span{
+	width: 7rem;
+	height: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -36,7 +36,6 @@
 
 			if(!userName || !passwd){
 				$("#login_error_text").text("用户名或者密码不正确");
-				$("#login_error_text").show();
 				return false;
 			}
 			var params = "userName="+userName+"&passwd="+passwd;
@@ -45,7 +44,6 @@
 					location.href = "index.html";
 				}else{
 					$("#login_error_text").text(data.info);
-					$("#login_error_text").show();
 					return false;
 				}
 			});

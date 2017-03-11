@@ -1,7 +1,11 @@
+.wrap{
+    position: relative;
+}
 .campDetail{
     padding: 0.5rem;
     font-size: 0.6rem;
     width: 15rem;
+    border-bottom: 10px solid #eee;
 }
 .campDetail span{
     line-height: 1rem;
@@ -22,4 +26,37 @@
     text-overflow: ellipsis;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
+}
+.detailCon{
+    margin-bottom: 1.5rem;
+    width: 16rem;
+    border-bottom: 10px solid #eee;
+}
+.detailList{
+    font-size: 0.6rem;
+}
+.camp_title{
+    width: 15rem;
+    padding:0 0.5rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    border-bottom: 1px solid #eee;
+}
+.camp_content{
+    color: #999;
+    padding: 0.5rem;
+    width: 15rem;
+    font-size: 0.5rem;
+}
+.log_in{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 16rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    font-size: 0.6rem;
+    color: #fff;
+    border: none;
+    background: green;
 }
