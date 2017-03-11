@@ -18,7 +18,7 @@ $(function(){
 		$(".title").html(data.data.title);
 		$(".departure").html(data.data.destination);
 		$(".startime").html(data.data.begintime);
-		$(".price").html(data.data.price);
+		$(".price").html("￥"+data.data.price);
 		for(var itemKey in data.data.imageArr){
 			var htmlStr = "<li><img src='"+data.data.imageArr[itemKey]+"'></li>";
 			$("#slide_box").append(htmlStr);
