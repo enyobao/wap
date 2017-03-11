@@ -23,21 +23,31 @@
 	font-size: 0.6rem;
 	border-bottom: 10px solid #eee;
 }
-.username{
+.username,.login{
 	width: 9rem;
 	height: 100%;
 	font-size: 0.6rem;
 	line-height: 3.5rem;
 	padding-left: 1rem;
 }
+.login{
+	text-decoration: underline;
+	color: blue;
+}
 .orderBox{
 	margin-bottom: 2rem;
 }
-.orderCon li{
+.orderCon li,.orderNone{
 	position: relative;
 	width: 15rem;
 	padding: 0.5rem;
 	border-bottom: 5px solid #eee;
+}
+.orderNone{
+	text-align: center;
+	font-size: 0.55rem;
+	color: #999;
+	border: none;
 }
 .orderCon li .orderStatus{
 	position: absolute;

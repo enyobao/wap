@@ -1,44 +1,44 @@
 .shareList {
-	width: 99%;
-	height:auto;
-	margin: 0.1rem 0.1rem;
+	width: 16rem;
+	background: #ececec;
 }
-#shareListUl li div img{
+#shareListUl li img{
 	width:4.7rem;
 	margin: 0.3rem 0.05rem;
 	height: 4.5rem;
 }
-#shareListUl li div {
+#shareListUl li{
+	position: relative;
 	height:100%;
 	border: 0.05rem solid #fff;
 	align-item: center;
+	padding: 0.5rem 0.5rem 1.5rem;
+	font-size: 0.6rem;
 }
-#shareListUl li div .UlSpanDivText{
-	width: 99%;
-	height: 100%;
-	margin: 0.1rem 0.11rem;
-	display: inline-block;
-}
-.UlSpanText {
-	width: 94%;
-	height: auto;
-	display: inline-block;
+#shareListUl li span{
+	display: block;
 }
 .fontBold {
 	font-weight: bold;
 }
 .lookDetail {
-	float: right;
+	position: absolute;
+	right: 0.5rem;
+	bottom: 0.7rem;
+	font-size: 0.5rem;
+	color: blue;
 }
 .UlSpanShareType {
-	float: right;
+	position: absolute;
+	right: 0.5rem;
+	top: 0.7rem;
 	display: inline-block;
     vertical-align: middle;
     height: 0.5rem;
     line-height: 0.5rem;
     padding: 0 0.1rem;
     color: #fff;
-    font-size: 0.3rem;
+    font-size: 0.5rem;
     font-weight: 400;
 }
 .backgroundColorGreen{

@@ -24,37 +24,28 @@
 	</div>
 	<script type="text/x-jsrender" id="shareListTmp">
 		<li>
-			<div>
-				<span class="UlSpanDivText clearfix">
-					<span class="UlSpanText fontBold">
-					{{:title}}
-					</span>
-					{{if #data.shareType==1}}
-					<span class="UlSpanShareType backgroundColorGreen">
-						视频
-					</span>
-					<span>
-						<p>
-							{{:detail}}
-						</p>
-					</span>
-					{{else}}
-					<span class="UlSpanShareType backgroundColorRed">
-						图片
-					</span>
-					<img src="{{:image_first}}"
-					>
-					<img src="{{:image_sec}}"
-					>
-					<img src="{{:image_third}}"
-					>
-					{{/if}}
-
-					<span class="lookDetail">
-						<a href="shareContent.html?id={{:id}}">查看详情 >></a>
-					</span>
-				</span>
-			</div>
+			<span class="UlSpanText fontBold">
+			{{:title}}
+			</span>
+			{{if #data.shareType==1}}
+			<span class="UlSpanShareType backgroundColorGreen">
+				视频
+			</span>
+			<span>
+				{{:detail}}
+			</span>
+			{{else}}
+			<span class="UlSpanShareType backgroundColorRed">
+				图片
+			</span>
+			<span>
+				<img src="{{:image_first}}"
+				>
+				{{if image_sec}}<img src="{{:image_sec}}">{{/if}}
+				{{if image_third}}<img src="{{:image_third}}">{{/if}}
+			</span>
+			{{/if}}
+			<a href="shareContent.html?id={{:id}}" class="lookDetail">查看详情 >></a>
 		</li>
 	</script>
 	<script type="text/x-jsrender" id="shareListImgTmp">
