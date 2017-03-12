@@ -45,22 +45,22 @@
     	<div>
     		<span class="clearfix">
     			<span class="fl">用户名：</span>
-                <input type="text" class="fr text" value="1232234">
+                <input type="text" class="fr text" name="userName_0" value="1232234">
     		</span>
     		<span class="clearfix">
     			<span class="fl">联系方式：</span>
-                <input type="text" class="fr text" value="1232234">
+                <input type="text" class="fr text" name="phone_0" value="1232234">
     		</span>
     		<span class="clearfix">
     			<span class="fl">性别：</span>
     			<span class="fr" style="text-align: right;">
-    				<label for=""><input type="radio" name="man">男</label>
-    				<label for=""><input type="radio" name="woman">女</label>
+    				<label for=""><input type="radio" value="man" name="sex_0">男</label>
+    				<label for=""><input type="radio" value="woman" name="sex_0">女</label>
     			</span>
     		</span>
     		<span>
     			<span class="mark">备注：</span>
-    			<textarea name="" id="" cols="30" rows="10" placeholder="想对我们说什么，就在这里写下来吧～"></textarea>
+    			<textarea name="mark_0" id="" class="mark" cols="30" rows="10" placeholder="想对我们说什么，就在这里写下来吧～"></textarea>
     		</span>
     	</div>
     </div>
@@ -69,22 +69,22 @@
 	   <div>
             <span class="clearfix">
                 <span class="fl">用户名：</span>
-                <input type="text" class="fr text" value="1232234">
+                <input type="text" class="fr text" value="1232234" name="userName_{{:ind}}">
             </span>
             <span class="clearfix">
                 <span class="fl">联系方式：</span>
-                <input type="text" class="fr text" value="1232234">
+                <input type="text" class="fr text" value="1232234" name="phone_{{:ind}}">
             </span>
             <span class="clearfix">
                 <span class="fl">性别：</span>
                 <span class="fr" style="text-align: right;">
-                    <label for=""><input type="radio" name="man">男</label>
-                    <label for=""><input type="radio" name="woman">女</label>
+                    <label for=""><input type="radio" name="sex_{{:ind}}" value="man" >男</label>
+                    <label for=""><input type="radio" name="sex_{{:ind}}" value="woman">女</label>
                 </span>
             </span>
             <span>
                 <span class="mark">备注：</span>
-                <textarea name="" id="" cols="30" rows="10" placeholder="想对我们说什么，就在这里写下来吧～"></textarea>
+                <textarea name="mark_{{:ind}}" id="mark" cols="30"  class="mark" rows="10" placeholder="想对我们说什么，就在这里写下来吧～"></textarea>
             </span>
         </div>
     </script>
