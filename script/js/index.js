@@ -50,16 +50,34 @@ $(function(){
 			$('.slide_dot li').removeClass('on').eq(dotNum).addClass('on');
 		}
 	},5000);
+
+	//种类，热门城市
 	for(var itemKey in hotArr){
 		$("#hotArr").append("<span>"+hotArr[itemKey]+"</span>");
 	}
 	for(var itemKey in typeArr){
 		$("#typeArr").append("<span data-id='"+itemKey+"'>"+typeArr[itemKey]+"</span>");
 	}
-	$("#hotAreaBut").toggle(function(){
-		$("#hotArr").show();
-	},function(){
-		$("#hotArr").hide();
-	}
-	);	
+
+	$('.sel li').off('click').on('click',function(){
+		$('.sel li').removeClass('on');
+		$(this).addClass('on');
+		var index = $(this).index()-1;
+		$('barBox li').removeClass('on');
+		if(index >= 0){
+			$('barBox li').eq(index).addClass('on');
+		}
+	});
+	// $("#hotAreaBut").toggle(function(){
+	// 	$("#hotArr").show();
+	// },function(){
+	// 	$("#hotArr").hide();
+	// }
+	// );
+	// $("#hotAreaBut").toggle(function(){
+	// 	$("#typeArr").show();
+	// },function(){
+	// 	$("#typeArr").hide();
+	// }
+	// );	
 });
