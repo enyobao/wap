@@ -5,6 +5,8 @@ $(function(){
 	oWrap.css('height',clientH);
 	// oWrap.load('inc/header.inc');
 	var imageArray;
+	var hotArr;
+	var typeArr;
      ajaxGet("/wap/campaign/list", '', function(data){
 	 	console.log(data);
 	 	var campList = data.data.list;
@@ -12,6 +14,8 @@ $(function(){
          	var campListCon = $('#campListCon');
          	campListCon.append(campListTmp);
 		imageArray = data.data.img;
+		hotArr = data.data.hotAreaArr;
+		typeArr = data.data.campTypeArr;
 	 }); 
 
 	//轮播图
@@ -46,4 +50,16 @@ $(function(){
 			$('.slide_dot li').removeClass('on').eq(dotNum).addClass('on');
 		}
 	},5000);
+	for(var itemKey in hotArr){
+		$("#hotArr").append("<span>"+hotArr[itemKey]+"</span>");
+	}
+	for(var itemKey in typeArr){
+		$("#typeArr").append("<span data-id='"+itemKey+"'>"+typeArr[itemKey]+"</span>");
+	}
+	$("#hotAreaBut").toggle(function(){
+		$("#hotArr").show();
+	},function(){
+		$("#hotArr").hide();
+	}
+	);	
 });
