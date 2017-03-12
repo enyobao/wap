@@ -21,7 +21,7 @@ $(function(){
     $(".add").click(function(){
     	var valueNum =parseInt($(".num").val());
         valueNum++;
-        var addUserTmp = $('#addUserTmp').render();
+        var addUserTmp = $('#addUserTmp').render({ind:valueNum-1});
         addUserCon.append(addUserTmp);
     	$(".num").val(valueNum);
         var price = parseInt($("#campPrice").text()) * (valueNum) / (valueNum-1);
@@ -36,6 +36,39 @@ $(function(){
         $(".num").val(valueNum);
         var price = parseInt($("#campPrice").text()) * (valueNum) / (valueNum+1);
         $("#campPrice").text(changeTwoDecimal_f(price));
+    });
+    $(".comfirm").click(function(){
+	var num = $(".num").val();
+	var id = getQueryString("id");
+	var userName = "";
+	var phone = "";
+	var mark = "";
+	var sex = "";
+	var str = "[";
+	var arr = new Array();
+	for(var ind=0;ind<num;ind++){
+		var tmp = "{";
+		tmp += "\"userName\":\""+$("input[name='userName_"+ind+"']").val()+"\",";
+		tmp += "\"phone\":\""+$("input[name='phone_"+ind+"']").val()+"\",";
+		tmp += "\"sex\":\""+$("input[name='sex_"+ind+"']:checked").val()+"\",";
+		tmp += "\"mark\":\""+$("textarea[name='mark_"+ind+"']").val()+"\"";
+		tmp += "}";
+		console.log(tmp);
+		arr[ind] = tmp;
+	}
+	str += arr.join(",") + "]";
+ 	
+	var params = "campId="+id+"&num="+num+"&userList="+str;
+
+	ajaxPost("/wap/order/add", params, function(data){
+		console.log(data);
+		if(data.code == 200){
+			history.go(-1);
+		}else{
+			alert(data.info);
+			return false;
+		}
+	});	
     });
 });
 
