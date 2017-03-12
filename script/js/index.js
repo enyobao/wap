@@ -7,7 +7,9 @@ $(function(){
 	var imageArray;
 	var hotArr;
 	var typeArr;
-     ajaxGet("/wap/campaign/list", '', function(data){
+	var page = 1;
+    ajaxGet("/wap/campaign/list", '', getList); 
+    function getList(data){
 	 	console.log(data);
 	 	var campList = data.data.list;
 	 	var campListTmp = $('#campListTmp').render(campList);
@@ -16,7 +18,7 @@ $(function(){
 		imageArray = data.data.img;
 		hotArr = data.data.hotAreaArr;
 		typeArr = data.data.campTypeArr;
-	 }); 
+	 }
 
 	//轮播图
 	var slideTmp = $('#slideTmp').render(imageArray);
@@ -91,4 +93,18 @@ $(function(){
 		}
 		$(this).removeClass('on');
 	});
+
+	//滚动刷新--scroll
+	 $(window).scroll(function () {
+        //$(window).scrollTop()这个方法是当前滚动条滚动的距离
+        //$(window).height()获取当前窗体的高度
+        //$(document).height()获取当前文档的高度
+        var bot = 50; //bot是底部距离的高度
+        if ((bot + $(window).scrollTop()) >= ($(document).height() - $(window).height())) {
+           //当底部基本距离+滚动的高度〉=文档的高度-窗体的高度时；
+            //我们需要去异步加载数据了
+            page++;
+    		ajaxGet("/wap/campaign/list", page, getList); 
+        }
+    });
 });

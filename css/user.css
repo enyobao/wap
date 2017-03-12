@@ -59,7 +59,22 @@
 	font-size: 0.6rem;
 	text-align: center;
 	color: #fff;
+	background: #ccc;
+}
+.orderCon li .waiting{
+	background: green;
+}
+.orderCon li .finish{
 	background: #f00;
+}
+.orderCon li .goEvaluate{
+	position: absolute;
+	bottom: 0.5rem;
+	right: 0.5rem;
+	font-size: 0.5rem;
+	text-align: right;
+	width: 3rem;
+	height: 1rem;
 }
 .orderCon li img{
     width:30%;
