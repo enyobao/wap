@@ -24,6 +24,7 @@
 }
 .on{
 	background: url(../img/staron.png) center center no-repeat;
+	background-size: cover;
 }
 .container textarea{
 	width: 15rem;
