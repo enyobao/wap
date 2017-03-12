@@ -53,31 +53,39 @@ $(function(){
 
 	//种类，热门城市
 	for(var itemKey in hotArr){
-		$("#hotArr").append("<span>"+hotArr[itemKey]+"</span>");
+		$("#hotArr").append("<span>"+hotArr[itemKey]+"</span><button class="reset">重置</button><button class="confirm">确定</button>");
 	}
 	for(var itemKey in typeArr){
-		$("#typeArr").append("<span data-id='"+itemKey+"'>"+typeArr[itemKey]+"</span>");
+		$("#typeArr").append("<span data-id='"+itemKey+"'>"+typeArr[itemKey]+"</span><button class="reset">重置</button><button class="confirm">确定</button>");
 	}
-
+	//切换标签－热门城市，种类
 	$('.sel li').off('click').on('click',function(){
 		$('.sel li').removeClass('on');
 		$(this).addClass('on');
 		var index = $(this).index()-1;
-		$('barBox li').removeClass('on');
+		$('.barBox li').removeClass('on');
 		if(index >= 0){
-			$('barBox li').eq(index).addClass('on');
+			$('.barBox li').eq(index).addClass('on');
 		}
 	});
-	// $("#hotAreaBut").toggle(function(){
-	// 	$("#hotArr").show();
-	// },function(){
-	// 	$("#hotArr").hide();
-	// }
-	// );
-	// $("#hotAreaBut").toggle(function(){
-	// 	$("#typeArr").show();
-	// },function(){
-	// 	$("#typeArr").hide();
-	// }
-	// );	
+	//点击标签类
+	var hotArr;
+	var typeArr;
+	$('barShow li span').toggle(function(){
+		var index = $(this).parent().index();
+		if(index){
+			hotArr = hotArr? $(this).html():hotArr+ "," + $(this).html();
+		}else{
+			typeArr = typeArr? $(this).html():typeArr+ "," + $(this).html();
+		}
+		$(this).addClass('on');
+	},function(){
+		var index = $(this).parent().index();
+		if(index){
+			hotArr.replace($(this.html),"");
+		}else{
+			typeArr.replace($(this.html),"");
+		}
+		$(this).removeClass('on');
+	});
 });

@@ -56,7 +56,8 @@
     width: 16rem;
 }
 .barBox li{
-    padding: 0.5rem;
+    position: relative;
+    padding: 0.5rem 0.5rem 2rem;
     width: 15rem;
     display: flex;
     align-items:center;
@@ -71,6 +72,23 @@
 }
 .barBox li.on{
     display: block;
+}
+.barBox li span.on{
+    border-color: green;
+}
+.confirm,.reset{
+    position: absolute;
+    right: 0.5rem;
+    bottom: 0.5rem;
+    width: 3rem;
+    height: 1.5rem;
+    background: green;
+    font-size: 0.6rem;
+    line-height: 1.5rem;
+    color: #fff;
+}
+.reset{
+    right: 4rem;
 }
 .campList li {
     position: relative;
