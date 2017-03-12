@@ -53,10 +53,10 @@ $(function(){
 
 	//种类，热门城市
 	for(var itemKey in hotArr){
-		$("#hotArr").append("<span>"+hotArr[itemKey]+"</span><button class="reset">重置</button><button class="confirm">确定</button>");
+		$("#hotArr").append("<span>"+hotArr[itemKey]+"</span><button class='reset'>重置</button><button class='confirm'>确定</button>");
 	}
 	for(var itemKey in typeArr){
-		$("#typeArr").append("<span data-id='"+itemKey+"'>"+typeArr[itemKey]+"</span><button class="reset">重置</button><button class="confirm">确定</button>");
+		$("#typeArr").append("<span data-id='"+itemKey+"'>"+typeArr[itemKey]+"</span><button class='reset'>重置</button><button class='confirm'>确定</button>");
 	}
 	//切换标签－热门城市，种类
 	$('.sel li').off('click').on('click',function(){
