@@ -7,7 +7,17 @@
 $(function(){
 	//判断用户是否登录，以下为假数据
 	var login = false;
-	var userName = "aniir2345543";
+	var userName = '';
+	ajaxGet("/wap/user/info", "", function(data){
+		console.log(data);
+		if(data.code == 200){
+			login = true;
+			userName = data.data.name;
+		}else{
+			login = false;
+		}	
+	});
+	console.log("---login status---" + login);
 	if(login){//登录状态下获取订单信息
 		$('.userCon .username').html(userName);
 		var data = [

@@ -25,7 +25,7 @@ function ajaxGet(url, dataParams, funcBack){
 	$.ajax({
     	url:url,
     	type:'GET', //GET
-    	async:true,    //或false,是否异步
+    	async:false,    //或false,是否异步
     	data:dataParams,
     	timeout:5000,    //超时时间
     	dataType:'json',    //返回的数据格式：json/xml/html/script/jsonp/text

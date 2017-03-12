@@ -21,6 +21,7 @@ $(function(){
 	$(".num").val(valueNum+1);
         var price = parseInt($("#campPrice").text()) * (valueNum + 1) / valueNum;
 	$("#campPrice").text(changeTwoDecimal_f(price));
+	
     });
     $(".reduce").click(function(){
 	var valueNum =parseInt($(".num").val());
