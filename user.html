@@ -62,15 +62,15 @@
 	<script type="text/x-jsrender" id="orderListTmp">
 		<li>
 			<div class="clearfix">
-				<img src="{{:src}}"/>
+				<img src="{{:headImg}}"/>
 				<span class="campDetail">
-					<span class="title">{{:title}}</span>
-					<span class="departure">{{:departure}}</span>
-					<span class="starTime">{{:starTime}}</span>	
-					<span class="price">¥{{:price}}</span>
+					<span class="title">{{:campTitle}}</span>
+					<span class="departure">{{:destination}}</span>
+					<span class="starTime">{{:createTime}}</span>	
+					<span class="price">¥{{:amount}}</span>
 				</span>
 				<span class="orderStatus{{if status==2}} working {{else status==3}} finish{{/if}}">{{:statusMark}}</span>
-				{{if status==3}}<span class="goEvaluate">去评价</span>{{/if}}
+				{{if status==3}}<span class="goEvaluate"><a href="evaluate.html?id={{:id}}">{{:evaluateMark}}</a></span>{{/if}}
 			</div>	
 			<div class="userDetailBox">
 				<p class="up_down">

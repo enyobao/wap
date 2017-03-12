@@ -68,9 +68,9 @@ $(function(){
 		$('.barBox li').removeClass('on');
 		if(index >= 0){
 			$('.barBox li').eq(index).addClass('on');
-			$('barBox').show();
+			$('.barBox').show();
 		}else{
-			$('barBox').hide();
+			$('.barBox').hide();
 		}
 	});
 	//点击标签类

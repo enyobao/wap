@@ -20,6 +20,11 @@ $(function(){
 	console.log("---login status---" + login);
 	if(login){//登录状态下获取订单信息
 		$('.userCon .username').html(userName);
+		var orderList;
+		ajaxGet("/wap/order/list", "", function(res){
+			console.log(res);
+			orderList = res.data;
+		});
 		var data = [
 			{
 				src:"http://dl.bizhi.sogou.com/images/2012/03/14/124196.jpg",
@@ -81,7 +86,7 @@ $(function(){
 		];
 
 		if(data.length > 0){//显示订单列表
-			var orderListTmp = $('#orderListTmp').render(data);
+			var orderListTmp = $('#orderListTmp').render(orderList);
 			var orderListCon = $('#orderCon');
 			orderListCon.append(orderListTmp);
 
