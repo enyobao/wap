@@ -53,10 +53,10 @@ $(function(){
 
 	//种类，热门城市
 	for(var itemKey in hotArr){
-		$("#hotArr").append("<span>"+hotArr[itemKey]+"</span><button class='reset'>重置</button><button class='confirm'>确定</button>");
+		$("#hotArr").append("<span>"+hotArr[itemKey]+"</span>");
 	}
 	for(var itemKey in typeArr){
-		$("#typeArr").append("<span data-id='"+itemKey+"'>"+typeArr[itemKey]+"</span><button class='reset'>重置</button><button class='confirm'>确定</button>");
+		$("#typeArr").append("<span data-id='"+itemKey+"'>"+typeArr[itemKey]+"</span>");
 	}
 	//切换标签－热门城市，种类
 	$('.sel li').off('click').on('click',function(){
@@ -66,12 +66,15 @@ $(function(){
 		$('.barBox li').removeClass('on');
 		if(index >= 0){
 			$('.barBox li').eq(index).addClass('on');
+			$('barBox').show();
+		}else{
+			$('barBox').hide();
 		}
 	});
 	//点击标签类
 	var hotArr;
 	var typeArr;
-	$('barShow li span').toggle(function(){
+	$('.barShow li span').toggle(function(){
 		var index = $(this).parent().index();
 		if(index){
 			hotArr = hotArr? $(this).html():hotArr+ "," + $(this).html();
