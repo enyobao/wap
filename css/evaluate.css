@@ -1,0 +1,43 @@
+.container{
+	width: 15rem;
+	padding: 0.5rem;
+	font-size: 0.6rem;
+	height: 1rem;
+	line-height: 1rem;
+}
+.container p{
+	height: 1rem;
+	line-height: 1rem;
+}
+.container p span{
+	float: left;
+}
+.star{
+	display: inline-block;
+}
+.starNum{
+	display: inline-block;
+	background: url(../img/star.png) center center no-repeat;
+	background-size: cover;
+	width: 1rem;
+	height: 1rem;
+}
+.on{
+	background: url(../img/staron.png) center center no-repeat;
+}
+.container textarea{
+	width: 15rem;
+	height: 4rem;
+	font-size: 0.6rem;
+	border: 1px solid #ccc;
+	float: left;
+	margin-bottom: 0.5rem;
+}
+.comfirm{
+	width: 15rem;
+	height: 1.5rem;
+	background: green;
+	color: #fff;
+	font-size: 0.6rem;
+	border: none;
+}

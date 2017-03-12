@@ -3,6 +3,7 @@ $(function(){
 	var clientH = $(document).height();
 	var oWrap = $('#wrap');
 	oWrap.css('height',clientH);
+	// oWrap.load('inc/header.inc');
  //    ajaxGet("/wap/campaign/list", '', function(data){
 	// 	console.log(data);
 	// 	var campList = data.list;
@@ -19,15 +20,23 @@ $(function(){
 	var campListCon = $('#campListCon');
 	campListCon.append(campListTmp);
 	
-	var slideData = [
+
+	//轮播图
+	var imageArray = [
 		'img/slide.jpg',
 		'img/slide.jpg',
 		'img/slide.jpg',
 		'img/slide.jpg',
 		'img/slide.jpg'
 	];
+	var slideTmp = $('#slideTmp').render(imageArray);
+	var slideCon = $('#slide_box');
+	slideCon.append(slideTmp);
+	var slideDotTmp = $('#slideDotTmp').render(imageArray);
+	var slideDotCon = $('.slide_dot');
+	slideDotCon.append(slideDotTmp);
+	slideDotCon.find('li').eq(0).addClass('on');
 
-	//轮播图
 	$('#slide_box').append($('#slide_box').html());
 	var oSlideList = $('#slide_box li');
 	var oSlideLength = oSlideList.length;
