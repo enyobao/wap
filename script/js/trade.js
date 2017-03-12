@@ -16,41 +16,25 @@ $(function(){
         $("#campPrice").html(campInfo.price);
     });
 
-    var tradeCon = $('.trade');
+    var addUserCon = $('#addUserCon');
 
     $(".add").click(function(){
     	var valueNum =parseInt($(".num").val());
-    	console.log("---num----"+valueNum);
         valueNum++;
-        var arr = [];
-        for(var i=0;i<valueNum; i++){
-            arr.push({'valueNum':valueNum});
-        }
-        console.log("arr:"+JSON.stringify(arr));
-        tradeCon.remove('div');
-        var addUserTmp = $('#addUserTmp').render(arr);
-        tradeCon.append(addUserTmp);
+        var addUserTmp = $('#addUserTmp').render();
+        addUserCon.append(addUserTmp);
     	$(".num").val(valueNum);
         var price = parseInt($("#campPrice").text()) * (valueNum) / (valueNum-1);
 	   $("#campPrice").text(changeTwoDecimal_f(price));
 	
     });
     $(".reduce").click(function(){
-	   var valueNum =parseInt($(".num").val());
-        console.log("---num----"+valueNum);
-
-        valueNum++;
-        var arr = [];
-        for(var i=0;i<valueNum; i++){
-            arr.push({'valueNum':valueNum});
-        }
-        console.log("arr:"+JSON.stringify(arr));
-        tradeCon.remove('div');
-        var addUserTmp = $('#addUserTmp').render(arr);
-        tradeCon.append(addUserTmp);
-
-        $(".num").val(valueNum-1);
-        var price = parseInt($("#campPrice").text()) * (valueNum - 2) / (valueNum-1);
+	    var valueNum =parseInt($(".num").val());
+        valueNum--;
+        var userChild = addUserCon.children();
+        userChild.eq(valueNum).remove();
+        $(".num").val(valueNum);
+        var price = parseInt($("#campPrice").text()) * (valueNum) / (valueNum+1);
         $("#campPrice").text(changeTwoDecimal_f(price));
     });
 });
