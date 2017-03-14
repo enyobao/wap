@@ -76,7 +76,7 @@ $(function(){
 	//点击标签类
 	var hotArr;
 	var typeArr;
-	$('.barShow li span').off('click').on('click',function(){
+	$('.barBox li span').off('click').on('click',function(){
 		var index = $(this).parent().index();
 		if($(this).hasClass('on')){
 			if(index){
