@@ -76,23 +76,41 @@ $(function(){
 	//点击标签类
 	var hotArr;
 	var typeArr;
-	$('.barShow li span').toggle(function(){
+	$('.barShow li span').off('click').on('click',function(){
 		var index = $(this).parent().index();
-		if(index){
-			hotArr = hotArr? $(this).html():hotArr+ "," + $(this).html();
+		if($(this).hasClass('on')){
+			if(index){
+				hotArr.replace($(this.html),"");
+			}else{
+				typeArr.replace($(this.html),"");
+			}
+			$(this).removeClass('on');
 		}else{
-			typeArr = typeArr? $(this).html():typeArr+ "," + $(this).html();
-		}
-		$(this).addClass('on');
-	},function(){
-		var index = $(this).parent().index();
-		if(index){
-			hotArr.replace($(this.html),"");
-		}else{
-			typeArr.replace($(this.html),"");
-		}
-		$(this).removeClass('on');
+			if(index){
+				hotArr = hotArr? $(this).html():hotArr+ "," + $(this).html();
+			}else{
+				typeArr = typeArr? $(this).html():typeArr+ "," + $(this).html();
+			}
+			$(this).addClass('on');
+		}	
 	});
+	// $('.barShow li span').toggle(function(){
+	// 	var index = $(this).parent().index();
+	// 	if(index){
+	// 		hotArr = hotArr? $(this).html():hotArr+ "," + $(this).html();
+	// 	}else{
+	// 		typeArr = typeArr? $(this).html():typeArr+ "," + $(this).html();
+	// 	}
+	// 	$(this).addClass('on');
+	// },function(){
+	// 	var index = $(this).parent().index();
+	// 	if(index){
+	// 		hotArr.replace($(this.html),"");
+	// 	}else{
+	// 		typeArr.replace($(this.html),"");
+	// 	}
+	// 	$(this).removeClass('on');
+	// });
 
 	//滚动刷新--scroll
 	 $(window).scroll(function () {
