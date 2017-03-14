@@ -79,14 +79,14 @@ $(function(){
 	$('.barBox li span').off('click').on('click',function(){
 		var index = $(this).parent().index();
 		if($(this).hasClass('on')){
-			if(index){
+			if(index == 0){
 				hotArr.replace($(this.html),"");
 			}else{
 				typeArr.replace($(this.html),"");
 			}
 			$(this).removeClass('on');
 		}else{
-			if(index){
+			if(index == 0){
 				hotArr = hotArr? $(this).html():hotArr+ "," + $(this).html();
 			}else{
 				typeArr = typeArr? $(this).html():typeArr+ "," + $(this).html();
