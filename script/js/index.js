@@ -10,7 +10,7 @@ $(function(){
 	var page = 1;
     ajaxGet("/wap/campaign/list", '', getList); 
     function getList(data){
-	 	console.log(data);
+	 	console.log("list:"+JSON.stringify(data));
 	 	var campList = data.data.list;
 	 	var campListTmp = $('#campListTmp').render(campList);
          	var campListCon = $('#campListCon');
@@ -78,18 +78,19 @@ $(function(){
 	var typeArrStr = "";
 	$('.barBox li span').off('click').on('click',function(){
 		var index = $(this).parent().index();
+		console.log($(this).html());
 		if($(this).hasClass('on')){
 			if(index == 0){
-				hotArrStr.replace($(this.html()),"");
+				hotArrStr.replace($(this).html(),"");
 			}else{
-				typeArrStr.replace($(this.html()),"");
+				typeArrStr.replace($(this).html(),"");
 			}
 			$(this).removeClass('on');
 		}else{
 			if(index == 0){
-				hotArrStr = !hotArrStr? $(this).html():hotArrStr+ "," + $(this).html();
+				hotArrStr = hotArrStr? hotArrStr+ "," + $(this).html() : $(this).html();
 			}else{
-				typeArrStr = !typeArrStr? $(this).html():typeArrStr+ "," + $(this).html();
+				typeArrStr = typeArrStr? typeArrStr+ "," + $(this).html() : $(this).html();
 			}
 			$(this).addClass('on');
 		}	
