@@ -74,26 +74,30 @@ $(function(){
 		}
 	});
 	//点击标签类
-	hotArr = [];
-	typeArr = [];
+	var hotArrStr = "";
+	var typeArrStr = "";
 	$('.barBox li span').off('click').on('click',function(){
 		var index = $(this).parent().index();
 		if($(this).hasClass('on')){
 			if(index == 0){
-				hotArr.replace($(this.innerHTML()),"");
+				hotArrStr.replace($(this.html()),"");
 			}else{
-				typeArr.replace($(this.innerHTML()),"");
+				typeArrStr.replace($(this.html()),"");
 			}
 			$(this).removeClass('on');
 		}else{
 			if(index == 0){
-				hotArr = hotArr? $(this).innerHTML():hotArr+ "," + $(this).innerHTML();
+				hotArrStr = !hotArrStr? $(this).html():hotArrStr+ "," + $(this).html();
 			}else{
-				typeArr = typeArr? $(this).innerHTML():typeArr+ "," + $(this).innerHTML();
+				typeArrStr = !typeArrStr? $(this).html():typeArrStr+ "," + $(this).html();
 			}
 			$(this).addClass('on');
 		}	
 	});
+
+	console.log("typeArrStr:  "+typeArrStr);
+	console.log("hotArrStr:  "+hotArrStr);
+
 	// $('.barShow li span').toggle(function(){
 	// 	var index = $(this).parent().index();
 	// 	if(index){
