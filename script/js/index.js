@@ -73,6 +73,7 @@ $(function(){
 			$('.barBox li').eq(index).addClass('on');
 			$('.barBox').show();
 		}else{
+			page = 1;
 			$('.barBox').hide();
 			ajaxGet("/wap/campaign/list", '', getList);
 		}
