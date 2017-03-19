@@ -5,7 +5,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
-	<title>分享</title>
+	<title>iOutDoor+</title>
 	<link rel="stylesheet" type="text/css" href="css/base.css">
 	<link rel="stylesheet" type="text/css" href="css/register.css">
 	<link rel="stylesheet" type="text/css" href="css/share.css">
@@ -13,11 +13,19 @@
 	<script src="script/utils/jquery.min.js"></script>
 	<script src="script/utils/jsrender.min.js"></script>
 	<script src="script/utils/common.js"></script>
+	<script>
+		$(function(){
+			//设置可视区高度－wrap高度
+			var clientH = $(document).height();
+			var oWrap = $('#wrap');
+			oWrap.css('height',clientH);
+		});
+	</script>
 </head>
 <body>
-	<div class="content">
+	<div class="content" id="wrap">
 		<div class="daohang clearfix">
-			<span class="goback"> </span>
+			<span class="goback" onclick="history.go(-1);"> </span>
 			<span class="registerChar">分享</span>
 		</div>
 		<div class="shareContentTitle">
