@@ -19,10 +19,27 @@
     width: 100%;
     
 }
-.header .search{
-    width: 8rem;
+.header .searchBox{
+    display: block;
+    width: 9.6rem;
     height: 1.5rem;
     font-size: 0.8rem;
+    position: relative;
+    background: #fff;
+}
+.header .search{
+    width: 7.5rem;
+    padding: 0 0.25rem;
+    height: 1.5rem;
+    font-size: 0.8rem;
+    border: 0;
+}
+.header .searchIcon{
+    width: 1.5rem;
+    height: 1.5rem;
+    background: url(../img/search.png) center no-repeat;
+    background-size: cover;
+    border-left: 2px solid #ccc;
 }
 .header .login{
     color: #fff;
