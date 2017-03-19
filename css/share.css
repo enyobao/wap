@@ -28,6 +28,18 @@
 	font-size: 0.5rem;
 	color: blue;
 }
+.UlSpanText{
+	display: -webkit-box;
+	-webkit-box-orient:vertical;
+	-webkit-line-clamp:3;
+	overflow: hidden;
+}
+.UlSpanContent{
+	display: -webkit-box;
+	-webkit-box-orient:vertical;
+	-webkit-line-clamp:3;
+	overflow: hidden;
+}
 .UlSpanShareType {
 	position: absolute;
 	right: 0.5rem;
