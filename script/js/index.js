@@ -15,7 +15,7 @@ $(function(){
 	 	var campListTmp = $('#campListTmp').render(campList);
          	var campListCon = $('#campListCon');
 		if(page==1){
-			campListCon.removeChild();
+			campListCon.children().remove();
 		}
          	campListCon.append(campListTmp);
 		imageArray = data.data.img;
@@ -124,6 +124,16 @@ $(function(){
 		//此处调用接口
 		var params = "locationName="+encodeURIComponent(hotArr)+"&campType="+encodeURIComponent(typeArr)+"&keyword="+encodeURIComponent($("input[name='keyword']").val());
 		ajaxGet("/wap/campaign/list", params, getList);
+	});
+	$("#search").on("click", function(){
+	        var hotArr = hotArrStr.join(",");
+                var typeArr = typeArrStr.join(",");
+                page = 1;
+
+                $('.barBox').hide();
+                //此处调用接口
+                var params = "locationName="+encodeURIComponent(hotArr)+"&campType="+encodeURIComponent(typeArr)+"&keyword="+encodeURIComponent($("input[name='keyword']").val());
+                ajaxGet("/wap/campaign/list", params, getList);
 	});
 
 	//滚动刷新--scroll
