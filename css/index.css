@@ -13,7 +13,11 @@
     color: #fff;
 }
 .header .logo{
-
+    width: 5rem;
+}
+.header .logo img{
+    width: 100%;
+    
 }
 .header .search{
     width: 8rem;
@@ -120,4 +124,7 @@
     text-overflow: ellipsis;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
+}
+.campDetail .price{
+    color: #f00;
 }
