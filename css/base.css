@@ -121,6 +121,20 @@ input,textarea{
 .navlist img{
 	height: 100%;
 }
+.aboutUs{
+	width:14.5rem;padding:0.75rem;font-size: 0.5rem;
+}
+.aboutUs p{
+	text-indent:1rem ;
+	font-size: 0.5rem;
+	line-height: 0.8rem;
+}
+.aboutUsTitle{
+	width: 16rem;height: 2rem;line-height: 2rem;text-align: center;font-size: 0.5rem;
+}
+.aboutUsLogo{
+	width: 15rem;padding: 0 0.5rem 1rem;border-bottom: 2px solid green;
+}
 
 
 
