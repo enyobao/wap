@@ -95,7 +95,7 @@
     display: block;
 }
 .barBox li span.on{
-    border-color: green;
+    background-color: green;
 }
 .confirm,.reset{
     position: absolute;

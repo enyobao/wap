@@ -40,7 +40,7 @@
 			var params = "verifyCode="+verifyCode+"&phone="+phone;
 			ajaxPost("/wap/user/phone-send", params, function(data){
 				if(data.code == 200){
-					$("#phoneSend").text("30分钟后可以重发");
+					$("#phoneSend").text("验证码已发送");
 				}else{
 					alert(data.info);
 					return false;
@@ -58,7 +58,7 @@
 					return false;
 				}
 
-				var params = "phone="+phone+"&vcode="+phoneCode+"&password="+passwd;
+				var params = "phone="+phone+"&phoneCode="+phoneCode+"&passwd="+passwd;
 				ajaxPost("/wap/user/register", params, function(data){
 					if(data.code == 200){
 						location.href="login.html";

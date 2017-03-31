@@ -113,6 +113,7 @@ input,textarea{
 }
 .navlist{
 	height: 2rem;
+	margin:0 0.7rem;
 }
 .navlist a{
 	display: block;
