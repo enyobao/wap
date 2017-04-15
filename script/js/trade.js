@@ -63,7 +63,13 @@ $(function(){
 	ajaxPost("/wap/order/add", params, function(data){
 		console.log(data);
 		if(data.code == 200){
-			history.go(-1);
+			var orderId = data.data;
+			ajaxPost("/wap/order/pay", "orderId="+orderId, function(data){
+				console.log("----wap----callback----");
+				console.log(data);
+			});
+		}else if(data.code == 1002){
+			location.href="/m/login.html";
 		}else{
 			alert(data.info);
 			return false;
