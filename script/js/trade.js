@@ -64,10 +64,7 @@ $(function(){
 		console.log(data);
 		if(data.code == 200){
 			var orderId = data.data;
-			ajaxPost("/wap/order/pay", "orderId="+orderId, function(data){
-				console.log("----wap----callback----");
-				console.log(data);
-			});
+			location.href="/wap/pay/tiaozhuan?orderId="+orderId;
 		}else if(data.code == 1002){
 			location.href="/m/login.html";
 		}else{
